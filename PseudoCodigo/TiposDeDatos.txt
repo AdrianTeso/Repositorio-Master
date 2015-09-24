@@ -1,0 +1,64 @@
+/****************************************************************************************
+**
+** @file TiposDeDatos.txt
+**
+** @author Adrián Teso
+** @date 24/09/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver los ejercicios de Tipos e Identificadores
+**        planteados.
+****************************************************************************************/
+
+//Número de árboles en un bosque.
+/*
+** Este es un número entero,dado que no puede haber un número fraccional de árboles y
+** sin signo, porque no tendría sentido un número negativo de árboles.
+*/ 
+entero sin_signo numArbolesBosque;
+
+//Altura de un edificio.
+/*
+** Este es un número real,debido a que la altura de un edificio se cuenta en unidades 
+** métricas y con signo, si contamos que un edificio subterraneo tiene altura negativa.
+** La variable podrá tomar valores enteros, racionales e irracionales.
+*/
+real alturaEdificio_m;
+
+//Los datos de una cuenta corriente.
+/*
+** Como el anterior este esun número real, dado que puede tener fraccionarios, y puede
+** tomar valores enteros, racionales e irracionales.
+*/
+real dineroEnCuenta_euros;
+
+//El número de pasajeros de un barco.
+/*
+** Este caso es cómo el del número de árboles, es un entero sin signo, dado que no tiene
+** sentido pasajeros negativos enun barco.
+*/
+entero sin_signo numPasajerosBarco;
+
+//El resultado de una apuesta (ganar o perder).
+/*
+** Este es un valor lógico, dado que sólo se puede ganar o perder la apuesta y son estados 
+** complementarios.
+*/
+lógico resulApuesta;
+
+//La capital de Francia.
+/*
+** Este es una cadena de carácteres constante, dado que no varía en el tiempo.
+*/
+cadena constante CAPITAL_FRANCIA = "PARIS";
+
+//La letra 'T'.
+/*
+** La letra 'T' es un carácter consante.
+*/ 
+carácter constante LETRA_T = 'T';
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/*
+** cadena, carácter, entero, falso, lógico, real, verdadero son palabras reservadas del sistema.
+*/
