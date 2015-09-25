@@ -1,0 +1,40 @@
+/****************************************************************************************
+**
+** @file OperandosYExpresiones.txt
+**
+** @author Adrián Teso
+** @date 25/09/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver los ejercicios de Operandos y Expresiones
+**        planteados.
+****************************************************************************************/
+
+Escribir("Hola"+ ", buenos días");
+// El resultado de esta expresión es la cadena de carácteres "Hola, buenos días" que 
+// se imprimirá por pantalla.
+
+10 <= 10;
+// Esta expresión devolverá verdadero.
+
+10 <> 10;
+// Esta expresión devolverá falso.
+
+10 <> 4;
+// Esta expresión devolverá verdadero.
+
+20 <= 100;
+// Esta expresión devolverá verdadero.
+
+400 >= 1;
+// Esta expresión devolverá verdadero.
+
+1 = 3;
+// Esta expresión devolverá falso.
+
+
+(15 + 5) OR (7 + 3) = 20;
+// Esta expresión devolverá verdadero.
+
+(12 * 5) AND (4+2) = 6;
+// Esta expresión devolverá falso.
