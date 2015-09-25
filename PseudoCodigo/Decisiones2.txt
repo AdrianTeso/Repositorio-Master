@@ -1,0 +1,39 @@
+/****************************************************************************************
+**
+** @file Decisiones2.txt
+**
+** @author Adrián Teso
+** @date 24/09/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver el segundo ejercicio planteado.
+**
+****************************************************************************************/
+
+Programa: Decisiones2
+
+Módulo: Principal
+
+Variables:
+
+entero numCiudad;
+
+Inicio:
+	Escribir("¿Qué ciudad desea escoger?");
+	Escribir("1.- Madrid");
+	Escribir("2.- Barcelona");
+	Escribir("3.- Valencia");
+	Escribir("4.- Granada");
+	Escribir("5.- Zaragoza");
+	
+	numCiudad = leer();
+	
+	SEGUN numCiudad:
+	1: Escribir("Madrid");
+	2: Escribir("Barcelona");
+	3: Escribir("Valencia");
+	4: Escribir("Granada");
+	5: Escribir("Zaragoza");
+	SINO Escribir("ERROR: Número no válido.");
+	FIN_SEGUN
+Fin

@@ -1,0 +1,38 @@
+/****************************************************************************************
+**
+** @file Decisiones1.txt
+**
+** @author Adrián Teso
+** @date 24/09/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver el primer ejercicio planteado.
+**
+****************************************************************************************/
+
+Programa: Decisiones1
+
+Módulo: Principal
+
+Variables:
+
+real var1;
+real var2;
+real var_res;
+
+Inicio:
+	Escribir("Introduzca el primer número.");
+	var1 = leer();
+
+	Escribir("Introduzca el segundo número.");
+	var2 = leer();
+	
+	SI var1 < var2 ENTONCES
+		var_res = var1 + var2;
+	SINO
+		var_res = var1 - var2;
+	FIN_SI
+	
+	Escribir("El resultado es: ", var_res);
+
+Fin
