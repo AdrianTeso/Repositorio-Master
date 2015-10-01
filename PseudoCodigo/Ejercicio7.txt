@@ -1,0 +1,35 @@
+/****************************************************************************************
+**
+** @file Ejercicio7.txt
+**
+** @author Adrián Teso
+** @date 01/10/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver el ejercicio planteado.
+**
+****************************************************************************************/
+Programa: Ejercicio7
+
+Módulo: Principal
+
+Variables:
+real notaAlumnos;
+entero numAlumnos;
+entero contador;
+real notaMedia = 0;
+Inicio:
+	Escribir("Intoduzca el número de alumnos:");
+	numAlumnos = leer();
+	
+	para contador =1 incremento 1 hasta contador = numAlumnos hacer
+		Escribir("Intruzca la nota del alumno ", contador);
+		notaAlumnos = leer();
+		notaMedia = notaMedia + notaAlumnos;
+	fin_para;
+	
+	notaMedia = notaMedia / numAlumnos;
+	Escribir("La nota media de la clase es: ", notaMedia);
+Fin
+	
+	
