@@ -1,0 +1,27 @@
+/****************************************************************************************
+**
+** @file Ejercicio6.txt
+**
+** @author Adrián Teso
+** @date 01/10/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver el ejercicio planteado.
+**
+****************************************************************************************/
+Programa: Ejercicio6
+
+Módulo: Principal
+
+Variables:
+entero num;
+
+Inicio:
+	hacer
+		Escribir("Introduzca un número par.");
+		num = leer();
+		si num % 2 <> 0 entonces
+			Escribir("No es un número par.")
+		fin_si
+	mientras num %2 <> 0
+Fin

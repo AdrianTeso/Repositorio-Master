@@ -1,0 +1,28 @@
+/****************************************************************************************
+**
+** @file Ejercicio1.txt
+**
+** @author Adrián Teso
+** @date 01/10/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver el ejercicio planteado.
+**
+****************************************************************************************/
+Programa: Ejercicio1
+
+Módulo: Principal
+
+Variables:
+real radio;
+real superficie;
+real pi = 3.14159265359
+
+Inicio:
+	Escribir("Introduzca el radio del círculo:");
+	radio = leer();
+	superficie = pi * radio * radio;
+	Escribir("La superficie del círculo es: ");
+	Escribir(superficie);
+Fin
+	

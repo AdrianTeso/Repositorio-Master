@@ -1,0 +1,30 @@
+/****************************************************************************************
+**
+** @file Para_contar.txt
+**
+** @author Adrián Teso
+** @date 01/10/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver el ejercicio planteado.
+**
+****************************************************************************************/
+
+Programa: Para_contar
+
+Módulo: Principal
+
+Variables:
+entero cadNum[20];
+entero contador;
+
+Inicio:
+	Escribir("Inserte 20 números");
+	para contador = 0 hasta contador = 19 hacer
+		cadNum[contador] = leer();
+	fin_para
+	
+	para contador = 0 icremento 1 hasta contador = 19 hacer
+		Escribir(contador + 1, ": ", cadNum[contador]);
+	fin_para
+Fin

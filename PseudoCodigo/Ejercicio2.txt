@@ -1,0 +1,27 @@
+/****************************************************************************************
+**
+** @file Ejercicio2.txt
+**
+** @author Adrián Teso
+** @date 01/10/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver el ejercicio planteado.
+**
+****************************************************************************************/
+Programa: Ejercicio2
+
+Módulo: Principal
+
+Variables:
+
+real millaNautica = 1852;
+real millas;
+real metros;
+
+Inicio:
+	Escribir("Introduzca el valor en millas que desea convertir");
+	millas = leer();
+	metros = millaNautica * millas;
+	Escribir(millas, " millas son ", metros, "metros.");
+Fin

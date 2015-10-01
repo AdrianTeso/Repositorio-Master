@@ -1,0 +1,32 @@
+/****************************************************************************************
+**
+** @file Ejercicio4.txt
+**
+** @author Adrián Teso
+** @date 01/10/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver el ejercicio planteado.
+**
+****************************************************************************************/
+Programa: Ejercicio4
+
+Módulo: Principal
+
+Variables:
+
+real base;
+real altura;
+real area;
+real perimetro;
+
+Inicio:
+	Escribir("Introduzca la base y la altura del triangulo rectángulo que desea saber area y perímetro.");
+	base = leer();
+	altura = leer();
+	
+	area = (altura*base)/2;
+	perimetro = altura + base + sqrt(altura^2 + base^2);
+	Escribir("El perímetro es: ", perimetro);
+	Escribir("El area es: ", area);
+Fin

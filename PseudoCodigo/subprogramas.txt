@@ -1,0 +1,76 @@
+/****************************************************************************************
+**
+** @file subprogramas.txt
+**
+** @author Adrián Teso
+** @date 01/10/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver el ejercicio planteado.
+**
+****************************************************************************************/
+Programa: Subprogramas
+
+Módulo: Principal
+
+Variables:
+entero num;
+
+Inicio:
+	Escribir("Introduzca una opción de las siguientes tres:");
+	Escribir("1: Las diez primeras potencias de 3.");
+	Escribir("2: Números del 50 al 1.");
+	Escribir("3: Tabla de multiplicar del 8.");
+	
+	num = leer();
+	
+	según(num)
+		1: diezPotencias3();
+		2: num50_1();
+		3: TablaDel8();
+		
+		sino: Escribir("Las opciones son del 1 al 3.");
+		
+Fin
+
+Módulo: diezPotencias3
+
+Variables:
+
+entero contador;
+entero acumulador;
+
+Inicio:
+	acumulador = 1;
+	para contador = 1 incremento 1 hasta contador = 10 hacer
+		acumulador = acumulador * 3;
+		Escribir(contador, ": ", acumulador);
+	fin_para
+Fin
+
+Módulo: num50_1
+
+Variables:
+
+entero acumulador = 50;
+
+Inicio:
+	mientras acumulador > 0 hacer
+		Escribir(acumulador);
+		acumulador--;
+	fin_mientras
+Fin
+
+Módulo: TablaDel8
+
+Variables:
+
+entero acumulador = 8;
+
+Inicio:
+	
+	mientras acumulador <= 80 hacer
+		Escribir(acumulador);
+		acumulador = acumulador + 8;
+	fin_mientras
+Fin

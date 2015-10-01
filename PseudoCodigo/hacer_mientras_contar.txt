@@ -1,0 +1,29 @@
+/****************************************************************************************
+**
+** @file hacer_mientras_contar.txt
+**
+** @author Adrián Teso
+** @date 01/10/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver el ejercicio planteado.
+**
+****************************************************************************************/
+Programa: hacer_mientras_contar
+
+Módulo: Principal
+
+Variables:
+
+entero acumulador;
+entero var1;
+
+Inicio:
+	acumulador = 0;
+	Escribir("Introduzca números.");
+	hacer
+		var1 = leer();
+		acumulador = acumulador + var1;
+	mientras acumulador <= 100;
+Fin
+		

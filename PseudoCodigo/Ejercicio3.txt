@@ -1,0 +1,29 @@
+/****************************************************************************************
+**
+** @file Ejercicio3.txt
+**
+** @author Adrián Teso
+** @date 01/10/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver el ejercicio planteado.
+**
+****************************************************************************************/
+Programa: Ejercicio3
+
+Módulo: Principal
+
+Variables:
+
+real total;
+real valorDescontado;
+real descuento;
+
+Inicio:
+	Escribir("Introduzca el valor total de compra (sin decuento)");
+	total = leer();
+	Escribir("Introduzca el valor con el descuento aplicado");
+	valorDescontado = leer();
+	descuento = 100 * valorDescontado / total;
+	Escribir("El descuento total es de ", descuento, "%");
+Fin

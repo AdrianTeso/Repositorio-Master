@@ -1,0 +1,81 @@
+/****************************************************************************************
+**
+** @file Ejercicio5.txt
+**
+** @author Adrián Teso
+** @date 01/10/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver el ejercicio planteado.
+**
+****************************************************************************************/
+Programa: Ejercicio5
+
+Módulo: Principal
+
+Variables:
+
+entero num;
+
+Inicio:
+	Escribir("Escoja una de las siguientes opciones:");
+	Escribir("1: Introduzca el valor de millas náuticas y conviértalo a metros.");
+	Escribir("2: Introduzca el radio de un círculo y sepa su área.");
+	Escribir("3: Introduzca la base y la altura de un triángulo rectángulo y sepa su area y perímetro.");
+	num = leer();
+	segun(num)
+		1: millasAMetros();
+		2: areaCirculo();
+		3: areaPerimetroTriangulo();
+		sino: Escribir("Escoja una opción entre el 1 y el 3");
+	fin_segun
+Fin
+
+Módulo: millasAMetros
+
+Variables:
+
+real millaNautica = 1852;
+real millas;
+real metros;
+
+Inicio:
+	Escribir("Introduzca el valor en millas que desea convertir");
+	millas = leer();
+	metros = millaNautica * millas;
+	Escribir(millas, " millas son ", metros, "metros.");
+Fin
+
+Módulo: areaCirculo
+
+Variables:
+real radio;
+real superficie;
+real pi = 3.14159265359
+
+Inicio:
+	Escribir("Introduzca el radio del círculo:");
+	radio = leer();
+	superficie = pi * radio * radio;
+	Escribir("La superficie del círculo es: ");
+	Escribir(superficie);
+Fin
+
+Módulo: areaPerimetroTriangulo
+
+Variables:
+real base;
+real altura;
+real area;
+real perimetro;
+
+Inicio:
+	Escribir("Introduzca la base y la altura del triangulo rectángulo que desea saber area y perímetro.");
+	base = leer();
+	altura = leer();
+	
+	area = (altura*base)/2;
+	perimetro = altura + base + sqrt(altura^2 + base^2);
+	Escribir("El perímetro es: ", perimetro);
+	Escribir("El area es: ", area);
+Fin

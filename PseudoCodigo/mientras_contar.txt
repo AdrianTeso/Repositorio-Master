@@ -1,0 +1,25 @@
+/****************************************************************************************
+**
+** @file mientras_contar.txt
+**
+** @author Adrián Teso
+** @date 01/10/2015
+** @version 00_01
+**
+** @brief Este fichero viene a resolver el ejercicio planteado.
+**
+****************************************************************************************/
+Programa: mientras_contar
+
+Módulo: Principal
+
+Variables:
+
+entero contador = 10;
+
+Inicio:
+	mientras contador > 0 
+		Escribir(contador);
+		contador--;
+	fin_mientras
+Fin
