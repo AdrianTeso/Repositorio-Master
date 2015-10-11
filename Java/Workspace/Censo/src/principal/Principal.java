@@ -12,10 +12,11 @@
  ********************************************************************************/
 package principal;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import elementos.Alumno;
-import elementos.BaseDeDatos;
+import elementos.Profesor;
 
 /**
  * @author Adrían
@@ -25,7 +26,7 @@ public class Principal {
 	
 	
 	private static Scanner scanEntrada;
-	private static BaseDeDatos bddAlumnos;
+	private static ArrayList<Profesor> bddProfesores;
 
 	/**
 	 * @param args
@@ -33,35 +34,61 @@ public class Principal {
 	public static void main(String[] args) {
 		
 		Alumno aSujeto = new Alumno();
+		Profesor profe = new Profesor();
 		StringBuffer entrada;
-	
-		scanEntrada = new Scanner(System.in);
-		bddAlumnos = new BaseDeDatos();
+		int iContador;
 		
+		bddProfesores = new ArrayList<Profesor>();
+		scanEntrada = new Scanner(System.in);
 		do{
-			System.out.println("Introduzca los siguientes datos:");
+			System.out.println("Introduzca los siguientes datos del profesor:");
 			System.out.println("Nombre: ");
 			entrada = new StringBuffer();
-			entrada.append(scanEntrada.next());
+			entrada.append(scanEntrada.nextLine());
 			if(!entrada.toString().contains("salir")) {
-				aSujeto.setNombre(entrada.toString().trim());
+				profe.setNombre(entrada.toString().trim());
 				System.out.println("Apellidos: ");
-				aSujeto.setApellidos(scanEntrada.next().trim());
+				profe.setApellidos(scanEntrada.nextLine().trim());
 				System.out.println("Edad: ");
-				scanEntrada.nextLine();
-				aSujeto.setEdad(scanEntrada.nextInt());
-				System.out.println("Curso: ");
-				aSujeto.setCurso(scanEntrada.nextInt());
-				bddAlumnos.insertarAlumno(aSujeto);
+				profe.setEdad(scanEntrada.nextInt());
+				
 				entrada = null;
-
+				scanEntrada.nextLine();
+				do{
+					System.out.println("Introduzca los siguientes datos del alumno:");
+					System.out.println("Nombre: ");
+					entrada = new StringBuffer();
+					entrada.append(scanEntrada.nextLine());
+					if(!entrada.toString().contains("salir")) {
+						aSujeto.setNombre(entrada.toString().trim());
+						System.out.println("Apellidos: ");
+						aSujeto.setApellidos(scanEntrada.nextLine().trim());
+						System.out.println("Edad: ");
+						aSujeto.setEdad(scanEntrada.nextInt());
+						System.out.println("Curso: ");
+						aSujeto.setCurso(scanEntrada.nextInt());
+						profe.asignarAlumno(aSujeto);
+						entrada = null;
+						scanEntrada.nextLine();
+					}
+					else {
+						break;
+					}
+				}while(true);
+				bddProfesores.add(profe);
 			}
 			else {
 				break;
 			}
 		}while(true);
 		
-		System.out.println("El número de alumnos introducido es de: " + bddAlumnos.contarAlumnos());
+		System.out.println("El número de profesores introducido es de: " + bddProfesores.size());
+		for(iContador = 0; iContador < bddProfesores.size(); iContador++)
+		{
+			//bddProfesores.get(iContador)
+			System.out.println("Profesor: " + bddProfesores.get(iContador).getNombre());
+			System.out.println("Nº de alumnos: " + bddProfesores.get(iContador).contarAlumnos());
+		}
 		
 		scanEntrada.close();
 	}
