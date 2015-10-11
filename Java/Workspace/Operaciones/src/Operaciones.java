@@ -14,16 +14,17 @@ import java.util.Scanner;
  ********************************************************************************/
 
 public class Operaciones {
-
+	
+	static int iNumEntero1, iNumEntero2;
+	static float fNumFlotante1, fNumFlotante2;
+	static String sCadena1, sCadena2;
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// Creamos el escaneador de la entrada de línea de comandos.
 		Scanner scanEntrada = new Scanner(System.in);
-		int iNumEntero1, iNumEntero2;
-		float fNumFlotante1, fNumFlotante2;
-		String sCadena1, sCadena2;
+		
 		
 		System.out.println("Introduzca dos números por favor:");
 		
@@ -36,25 +37,30 @@ public class Operaciones {
 			sCadena2 = scanEntrada.nextLine();
 			iNumEntero2 = Integer.parseInt(sCadena2);
 		}while(iNumEntero2 == 0);
+		
+		fNumFlotante1 = (float)iNumEntero1;
+		fNumFlotante2 = (float)iNumEntero2;
 
+		procesaSalida();
+		
+		scanEntrada.close();
+	}
+	
+	static void procesaSalida()
+	{
 		System.out.println("Los resultados son los siguientes");
 		System.out.print("Suma: ");
 		System.out.println(iNumEntero1 + iNumEntero2);
 		System.out.print("Resta: ");
 		System.out.println(iNumEntero1 - iNumEntero2);
-		fNumFlotante1 = (float)iNumEntero1 * (float)iNumEntero2;
+		
 		System.out.print("Multiplicación: ");
-		System.out.println(fNumFlotante1);
-		fNumFlotante2 = (float)iNumEntero1 / (float)iNumEntero2;
+		System.out.println(fNumFlotante1 * fNumFlotante2);
+		
 		System.out.print("Division: ");
-		System.out.println(fNumFlotante2);
-		System.out.println(iNumEntero1 + " es " + (fNumFlotante2 * 100.0) 
+		System.out.println(fNumFlotante1 / fNumFlotante2);
+		System.out.println(iNumEntero1 + " es " + (fNumFlotante1 / fNumFlotante2 * 100.0) 
 				           + "% de " + iNumEntero2);
-		
-		scanEntrada.close();
-		
-		
-
 	}
 
 }
