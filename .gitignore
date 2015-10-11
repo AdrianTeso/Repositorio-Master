@@ -30,3 +30,5 @@
 
 # Debug files
 *.dSYM/
+Java/Workspace/.metadata/*
+Java/Workspace/.recommenders/*
