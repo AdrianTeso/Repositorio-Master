@@ -28,7 +28,7 @@ public class ElegirForOWhile {
 		System.out.println("1: Para hacerlo mediante FOR");
 		
 		Elegir(scanEntrada.nextInt());
-		
+		scanEntrada.close();
 	}
 	
 	private static void Elegir(int iParametro)

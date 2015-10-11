@@ -31,6 +31,7 @@ public class SeleccionarMenu {
 		
 		iParametro = scanEntrada.nextInt();
 		seleccionMenu(iParametro);
+		scanEntrada.close();
 
 	}
 	private static void seleccionMenu(int iParametro)
