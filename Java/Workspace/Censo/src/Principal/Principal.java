@@ -14,7 +14,7 @@ package Principal;
 
 import java.util.Scanner;
 
-import Elementos.Persona;
+import Elementos.Alumno;
 
 /**
  * @author Adrían
@@ -22,7 +22,7 @@ import Elementos.Persona;
  */
 public class Principal {
 	
-	private static Persona pSujeto;
+	private static Alumno aSujeto;
 	private static Scanner scanEntrada;
 
 	/**
@@ -31,20 +31,25 @@ public class Principal {
 	public static void main(String[] args) {
 		
 		scanEntrada = new Scanner(System.in);
-		pSujeto = new Persona();
+		aSujeto = new Alumno();
 		
 		System.out.println("Introduzca los siguientes datos:");
 		System.out.print("Nombre: ");
-		pSujeto.setNombre(scanEntrada.nextLine());
+		aSujeto.setNombre(scanEntrada.nextLine());
 		System.out.print("Apellidos: ");
-		pSujeto.setApellidos(scanEntrada.nextLine());
+		aSujeto.setApellidos(scanEntrada.nextLine());
 		System.out.print("Edad: ");
-		pSujeto.setEdad(scanEntrada.nextInt());
+		aSujeto.setEdad(scanEntrada.nextInt());
+		System.out.println("Curso: ");
+		aSujeto.setCurso(scanEntrada.nextInt());
 		
 		System.out.println("Los datos introducidos son: ");
-		System.out.println("Nombre:\t\t" + pSujeto.getNombre());
-		System.out.println("Apellidos:\t" + pSujeto.getApellidos());
-		System.out.println("Edad:\t\t" + pSujeto.getEdad());
+		System.out.println("Nombre:\t\t" + aSujeto.getNombre());
+		System.out.println("Apellidos:\t" + aSujeto.getApellidos());
+		System.out.println("Edad:\t\t" + aSujeto.getEdad());
+		System.out.println("Curso:\t\t" + aSujeto.getCurso());
+		
+		scanEntrada.close();
 	}
 
 }

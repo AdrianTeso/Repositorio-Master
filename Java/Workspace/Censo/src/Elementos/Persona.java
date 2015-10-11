@@ -71,7 +71,4 @@ public class Persona {
 	public void setEdad(int edad) {
 		Edad = edad;
 	}
-	
-	
-
 }
