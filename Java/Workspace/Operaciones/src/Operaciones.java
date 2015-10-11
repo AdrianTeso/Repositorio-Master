@@ -51,7 +51,7 @@ public class Operaciones {
 		System.out.println(iNumEntero1 + " es " + (fNumFlotante2 * 100.0) 
 				           + "% de " + iNumEntero2);
 		
-		
+		scanEntrada.close();
 		
 		
 
